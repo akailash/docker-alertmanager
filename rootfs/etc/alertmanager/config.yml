@@ -1,5 +1,6 @@
 # Uncomment slack and insert your webhook url in order to get notifications on your slack.
-
+global: 
+     #hipchat_url: 'null'#
 route:
   receiver: 'logstash'
   repeat_interval: 3h #3h
@@ -15,9 +16,9 @@ route:
 receivers:
   - name: 'hipchat'
     hipchat_configs:
-    - #room_id: 'null'#
-      #auth_token: 'null'#
-      #url: 'null'#
+      - send_resolved: true
+        #room_id: 'null'#
+        #auth_token: 'null'#
   - name: 'slack'
     slack_configs:
       - send_resolved: true
