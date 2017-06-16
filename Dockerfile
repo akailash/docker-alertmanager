@@ -2,7 +2,10 @@ FROM prom/alertmanager:v0.6.2
 
 ENV "ALERTMANAGER_BIN=/bin/alertmanager" \
     "SLACK_API=null" \
-    "LOGSTASH_URL=http://logstash:8080/"
+    "LOGSTASH_URL=http://logstash:8080/"\
+    "HIPCHAT_ROOM=12345" \
+    "HIPCHAT_TOKEN=XXXXXXXXX" \
+    "HIPCHAT_URL=XXXXXXXXX"
 
 COPY rootfs /
 
