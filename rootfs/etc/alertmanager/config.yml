@@ -2,16 +2,16 @@
 global: 
      #hipchat_url: 'null'#
 route:
-  receiver: 'logstash'
+  #receiver: 'default'#
   repeat_interval: 3h #3h
   group_interval: 5m #5m
   group_wait: 1m #1m
-  routes:
-  - receiver: 'hipchat'
-    continue: true
-  - receiver: 'logstash'
-    continue: true
-  - receiver: 'slack'
+#  routes:
+#  - receiver: 'hipchat'
+#    continue: true
+#  - receiver: 'logstash'
+#    continue: true
+#  - receiver: 'slack'
 
 receivers:
   - name: 'hipchat'
